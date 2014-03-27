@@ -22,10 +22,17 @@ rm -rf ./libuv
 
 cd ..
 
+echo ""
 echo "=================================================="
 echo " Get Octane "
 echo "=================================================="
 
 git clone https://github.com/dai-shi/benchmark-octane.git
 
-cd benchmark-octane
+echo ""
+echo " Make JavaFX WebView"
+
+cd javafx-webview
+javac -cp . ./webviewsample/WebViewSample.java
+
+cd ..

@@ -1,5 +1,6 @@
 *.swp
 *.log
+*.class
 node_modules
 loopback-on-jvm
 benchmark-octane
