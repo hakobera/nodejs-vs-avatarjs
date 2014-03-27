@@ -3,7 +3,12 @@ function fibonacci(n) {
   return fibonacci(n-1) + fibonacci(n-2);
 }
 
-var Benchmark = require('benchmark');
+if (typeof require !== 'undefined') {
+  var Benchmark = require('benchmark');
+} else {
+  load('./node_modules/benchmark/benchmark.js');
+}
+
 var suite = new Benchmark.Suite;
 
 for (var i = 1; i <= 3; ++i) {

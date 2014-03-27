@@ -13,4 +13,4 @@ else
   export LD_LIBRARY_PATH=$ROOT/avatar-js/dist:$LD_LIBRARY_PATH
 fi
 cd $CD
-$JAVA_HOME/bin/java -jar $ROOT/avatar-js/dist/avatar-js.jar $@
+$JAVA_HOME/bin/java -Xms512m -Xmx512m -XX:+UseG1GC -Xloggc:G1GC.log -jar $ROOT/avatar-js/dist/avatar-js.jar $@
