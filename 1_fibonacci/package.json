@@ -1,0 +1,14 @@
+{
+  "name": "1_fibonacci",
+  "version": "0.0.1",
+  "description": "Benchmark fibonacci",
+  "main": "fibonacci.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "benchmark": "^1.0.0"
+  }
+}

@@ -1,0 +1,16 @@
+#!/bin/bash
+if [ -z "$JAVA_HOME" ]; then
+  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home
+fi
+CD=`pwd`
+ROOT=`dirname $0`
+cd $ROOT
+ROOT=`pwd`
+OS=`uname -s`
+if [ "Darwin" == "$OS" ]; then
+  export DYLD_LIBRARY_PATH=$ROOT/avatar-js/dist:$DYLD_LIBRARY_PATH
+else
+  export LD_LIBRARY_PATH=$ROOT/avatar-js/dist:$LD_LIBRARY_PATH
+fi
+cd $CD
+$JAVA_HOME/bin/java -jar $ROOT/avatar-js/dist/avatar-js.jar $@
